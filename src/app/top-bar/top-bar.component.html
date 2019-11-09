@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+  <span>テスト</span>
+  <span class="top-bar-fill-remaining-space"></span>
+  <span  *ngIf="isLoggedIn; else elseBlock">
+    <button mat-button (click)="logout()"><mat-icon>exit_to_app</mat-icon> Sign out</button>
+  </span>
+  <ng-template #elseBlock>
+    <button mat-button (click)="login()"><mat-icon>account_circle</mat-icon> Sign in</button>
+  </ng-template>
+</mat-toolbar>
